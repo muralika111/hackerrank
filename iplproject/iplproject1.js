@@ -11,4 +11,4 @@ for(let i in matches){
     }
 
 }
-console.log(obj)
+console.log(obj);
