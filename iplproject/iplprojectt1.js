@@ -1,14 +1,17 @@
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+
+},{}],2:[function(require,module,exports){
 
 var fs = require('fs');
-var matches = JSON.parse(fs.readFileSync('matches.json', 'utf-8'));
+var matchees = JSON.parse(matches);
 
 obj={};
-for(let i in matches){
-    if (obj.hasOwnProperty(matches[i]["season"])){
-        obj[matches[i]["season"]]+=1;
+for(let i in matchees){
+    if (obj.hasOwnProperty(matchees[i]["season"])){
+        obj[matchees[i]["season"]]+=1;
     }
     else{
-        obj[matches[i]["season"]]=0;
+        obj[matchees[i]["season"]]=0;
 
     }
 
@@ -74,3 +77,5 @@ Highcharts.chart('container', {
     });
 
 
+
+},{"fs":1}]},{},[2]);
